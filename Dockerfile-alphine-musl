@@ -1,0 +1,6 @@
+FROM bellsoft/liberica-openjdk-alpine-musl:23.0.2
+
+COPY target/notes-app-1.0-SNAPSHOT-jar-with-dependencies.jar notes.jar
+ADD static static
+
+ENTRYPOINT ["java", "-jar", "notes.jar"]

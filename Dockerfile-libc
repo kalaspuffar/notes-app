@@ -1,0 +1,6 @@
+FROM eclipse-temurin:23.0.2_7-jre-ubi9-minimal
+
+COPY target/notes-app-1.0-SNAPSHOT-jar-with-dependencies.jar notes.jar
+ADD static static
+
+ENTRYPOINT ["java", "-jar", "notes.jar"]
